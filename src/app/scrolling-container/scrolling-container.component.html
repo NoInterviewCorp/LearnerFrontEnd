@@ -1,0 +1,15 @@
+<!-- <h1>
+    {{header}}
+</h1>
+<div class="scrolling-wrapper">
+    <app-learning-plan *ngFor="let item of content">
+    </app-learning-plan>
+</div> -->
+<!-- <div class="scrolling-wrapper"> -->
+<div class="contribution-card-container">
+<div *ngFor="let item of plan">
+    <app-yourcontributionscard [plan]="item" *ngIf="choice==1"></app-yourcontributionscard>
+    <app-yoursubscriptionscard [plan]="item" *ngIf="choice==2"></app-yoursubscriptionscard>
+    <app-subscribecard [plan]="item" *ngIf="choice==3"></app-subscribecard>
+</div>
+</div>
