@@ -1,9 +1,0 @@
-.scrolling-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-  
-  .scrolling-wrapper::after{
-    margin-right: 10px;
-  }

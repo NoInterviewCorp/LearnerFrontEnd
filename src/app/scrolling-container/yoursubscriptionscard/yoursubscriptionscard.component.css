@@ -52,6 +52,7 @@ mat-accordian{
     flex-direction: row;
     flex-wrap: wrap;
     width: 200px;
+    justify-content: center;
 }
 
 

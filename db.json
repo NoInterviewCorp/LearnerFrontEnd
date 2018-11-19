@@ -63,9 +63,38 @@
                     ],
                     "ResourceLink": "your.web.site",
                     "BloomLevel": 1
+                },
+                {
+                    "QuestionId": 2,
+                    "ProblemStatement": "Python",
+                    "Options": [
+                        {
+                            "OptionId": 1,
+                            "Content": "Python- q2o1",
+                            "IsCorrect": true
+                        },
+                        {
+                            "OptionId": 2,
+                            "Content": "Python- q2o2",
+                            "IsCorrect": false
+                        },
+                        {
+                            "OptionId": 3,
+                            "Content": "Python- q2o3",
+                            "IsCorrect": false
+                        },
+                        {
+                            "OptionId": 4,
+                            "Content": "Python q2o4",
+                            "IsCorrect": false
+                        }
+                    ],
+                    "ResourceLink": "your.web.site",
+                    "BloomLevel": 1
                 }
             ]
         },
+        
         {   
             "Name": "Cloud Computing",
             "Questions": [
