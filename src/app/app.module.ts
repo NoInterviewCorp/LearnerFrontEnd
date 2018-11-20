@@ -34,7 +34,7 @@ import { CardComponent } from './learner/card/card.component';
 import { SubscribecardComponent } from './scrolling-container/subscribecard/subscribecard.component';
 import { YoursubscriptionscardComponent } from './scrolling-container/yoursubscriptionscard/yoursubscriptionscard.component';
 import { YourcontributionscardComponent } from './scrolling-container/yourcontributionscard/yourcontributionscard.component';
-import { ResultComponent } from './result/result.component';
+// import { ResultComponent } from './result/result.component';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -72,7 +72,7 @@ export function getAuthServiceConfigs() {
     SubscribecardComponent,
     YoursubscriptionscardComponent,
     YourcontributionscardComponent,
-    ResultComponent
+    // ResultComponent
   ],
   imports: [
     BrowserModule,

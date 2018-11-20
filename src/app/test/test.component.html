@@ -1,11 +1,17 @@
+<br><br>
 <div class="test">
 
 <div class = "button-flex">
 <button mat-raised-button class="Btn" *ngIf="showQuesButton" (click)="display()">Show Questions</button><br><br>
+<br><br>
+<div>
+<p>
+</p>
+</div>
 </div>
 
 <div class="test-box" *ngIf="!callResult">
-<!-- <div *ngIf="showTimer" class="badge">Time Left: {{counter}}</div> -->
+
 
 <div class="timer-container">
 <div class="timr" *ngIf="showTimer"> {{counter}}</div>
@@ -43,3 +49,36 @@
 </div>
 
 </div>
+
+<!-- <div>
+  <div class="button">
+      <button mat-raised-button class="btn" *ngIf="showQuesButton" (click)="display()">Show Questions</button>
+  </div>
+</div>
+
+<div class = "test-box" *ngIf="callResult">
+  <div *ngIf="showProgressBar">
+    <section class="progressbar-section">
+      <mat-progress-bar mode="determinate" class="progressbar-margin" [value]="value">
+      </mat-progress-bar>
+    </section> 
+  </div>
+  <div class="timer-container">
+      <div class="timer" *ngIf="showTimer">
+        {{counter}}
+      </div>
+  </div>
+  <div *ngIf="counter>=1" class="question">
+      <div class = "ques-box">
+        <div class="ques-title">
+        {{currentQuestion?.QuestionId}} {{currentQuestion?.ProblemStatement}}
+      </div>
+    </div>
+    <div class="button-flex">
+      <button mat-raised-button class="Btn" *ngIf="showNextButton" (click)="nextQuestion()">Next</button>
+        <a routerLink="/result" routerLinkActive="active" class="Btn" button mat-raised-button color="primary"  *ngIf="callResult" > Show Results</a>
+    </div>
+</div> -->
+
+
+
