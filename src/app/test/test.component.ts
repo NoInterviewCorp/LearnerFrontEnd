@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TestService } from '../services/test.service';
 import { Technology } from '../technology.model';
+import { Options } from '../option.model';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class TestComponent implements OnInit {
   counter: number = this.duration;
   i: number = 0;
   questionCounter = 0;
-  selectedOption: string;
+  selectedOption: Options;
   shouldDisplayQuestions = false;
   currentQuestion: any;
   showTimer = false;
@@ -59,43 +60,43 @@ export class TestComponent implements OnInit {
     this.gameClock();
   }
 
-    gameClock() {
-      const intervalMain = setInterval(() => {
-        this.counter--;
-        // console.log("counter:"+this.counter);
-        if (this.counter <= 0) {
-          this.nextQuestion();
-        }
-        //this.resetTimer();}
-        if (this.quesCount == this.totalQues) {
-          clearInterval(intervalMain);
-        }
-  
-      }, 1000);
-  
-    }
-
-    nextQuestion() {
-
-      this.resetTimer();
-      console.log(this.selectedOption);
-      this.selectedOption = "";
-      this.questionCounter++;
-      this.currentQuestion = this.questions[this.questionCounter];
-      this.value = this.value + this.valueInc;
-      if (this.quesCount == this.totalQues) {
-        this.showNextButton = false;
-        this.callResult = true;
-        this.showTimer = false;
-        this.showProgressBar = false;
+  gameClock() {
+    const intervalMain = setInterval(() => {
+      this.counter--;
+      // console.log("counter:"+this.counter);
+      if (this.counter <= 0) {
+        this.nextQuestion();
       }
-    }
+      //this.resetTimer();}
+      if (this.quesCount == this.totalQues) {
+        clearInterval(intervalMain);
+      }
 
-    resetTimer() {
-      //this.score+=this.counter*2;
-      this.quesCount++;
-      this.counter = this.duration;
-    }
+    }, 1000);
 
   }
+
+  nextQuestion() {
+
+    console.log(this.selectedOption.Content + " is " + ((this.selectedOption.IsCorrect) ? "correct" : "incorrect"));
+    this.resetTimer();
+    this.selectedOption = null;
+    this.questionCounter++;
+    this.currentQuestion = this.questions[this.questionCounter];
+    this.value = this.value + this.valueInc;
+    if (this.quesCount == this.totalQues) {
+      this.showNextButton = false;
+      this.callResult = true;
+      this.showTimer = false;
+      this.showProgressBar = false;
+    }
+  }
+
+  resetTimer() {
+    //this.score+=this.counter*2;
+    this.quesCount++;
+    this.counter = this.duration;
+  }
+
+}
 
